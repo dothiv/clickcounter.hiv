@@ -1,5 +1,6 @@
 @color-pink: #e1127a;
 @color-light-pink: #ffcad6;
+@color-muted: #999;
 
 a, a:hover, a:focus {
   color: @color-pink;
@@ -24,12 +25,16 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+h1 {
+  font-size: 20px;
+  .logo {
+
+  }
+  div {
+    border-left: 1px solid @color-muted;
+    padding: 10px;
+    margin-left: 15px;
+  }
 }
 
 /* Custom page footer */
