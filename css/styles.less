@@ -1,5 +1,6 @@
 @color-pink: #e1127a;
 @color-light-pink: #ffcad6;
+@color-light-yellow: #fff2c3;
 @color-muted: #999;
 
 a, a:hover, a:focus {
@@ -51,22 +52,27 @@ footer {
   margin: 30px 0;
 }
 
-.jumbotron {
+.jumbotron, .testing {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+  .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+  }
 }
 
 .jumbotron {
+  border-bottom: 1px solid #e5e5e5;
   background-color: @color-light-pink;
   .btn-success {
     background-color: @color-pink;
     border-color: @color-pink;
   }
+}
+
+.testing {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: @color-light-yellow;
+  margin-bottom: 15px;
 }
 
 article {
