@@ -31,9 +31,7 @@
 <div class="container">
     <div class="header">
         <h1 class="text-muted clearfix">
-            <a href="http://dotHIV.org/" title=".hiv domains – The Red Ribbon of the digital age | HIV &amp; AIDS"><img
-                    src="https://raw.githubusercontent.com/dothiv/dothiv-gfx/master/png/logo@4x.png"
-                    alt=".hiv" class="logo pull-left"></a>
+            <a href="http://dotHIV.org/" title=".hiv domains – The Red Ribbon of the digital age | HIV &amp; AIDS"><img src="https://raw.githubusercontent.com/dothiv/dothiv-gfx/master/png/logo@4x.png" alt=".hiv" class="logo pull-left"></a>
 
             <small class="pull-left">Click<br>Counters</small>
         </h1>
@@ -43,11 +41,11 @@
         <h2>Testing click counters</h2>
 
         <p class="lead">
-            We are currently testing the click counters. So every number you see on the counter is not real but test data.
-        </p>
+            We are currently testing the click counters. So every number you see on the counter is not real but test
+            data. </p>
 
         <div class="progress progress-striped active">
-            <div class="progress-bar progress-bar-warning"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
         </div>
 
     </div>
@@ -56,13 +54,10 @@
         <h2>Every click counts!</h2>
 
         <p class="lead">
-            At <span itemscope itemtype="http://schema.org/Organization"><a
-                href="http://dotHIV.org/" itemprop="url" rel="me"><span
-                itemprop="name">dotHIV</span></a><span
-                itemprop="description" class="hidden">.hiv domains – The Red Ribbon of the digital age</span></span>
-            this is especially true as the amount of money given to our projects depends on the number of
-            times .HIV domains are visited.</p>
-
+            At
+            <span itemscope itemtype="http://schema.org/Organization"><a href="http://dotHIV.org/" itemprop="url" rel="me"><span itemprop="name">dotHIV</span></a><span itemprop="description" class="hidden">.hiv domains – The Red Ribbon of the digital age</span></span>
+            this is especially true as the amount of money given to our projects depends on the number of times .HIV
+            domains are visited.</p>
 
         <p><a class="btn btn-lg btn-success" href="http://dotHIV.org/" role="button">More about <span class="hidden-xs">the</span>
             <strong>dotHIV</strong> <span class="hidden-xs">initiative</span></a></p>
@@ -76,27 +71,17 @@
             </div>
             <div class="col-lg-6">
 
-
-                <p>To encourage users to continuously visit .HIV domains and inform the about
-                    the progress of the current campaign we will show them a visual feedback every time they visit one
-                    of
-                    our
-                    domains.</p>
-
+                <p>To encourage users to continuously visit .HIV domains and inform the about the progress of the
+                    current campaign we will show them a visual feedback every time they visit one of our domains.</p>
 
             </div>
 
             <div class="col-lg-6">
                 <p>We call this feedback <strong>click counters</strong>. This also serves as a tracking tool as we
-                    cannot
-                    tap
-                    directly into the DNS to track .HIV visits right now. We kindly ask every domain owner to integrate
-                    a
-                    one-line code snippet into their existing website or let their .HIV domain server a simple
-                    pre-generated
-                    HTML document in order to display the click counters.</p>
+                    cannot tap directly into the DNS to track .HIV visits right now. We kindly ask every domain owner to
+                    integrate a one-line code snippet into their existing website or let their .HIV domain server a
+                    simple pre-generated HTML document in order to display the click counters.</p>
             </div>
-
 
         </div>
 
@@ -104,11 +89,41 @@
             <div class="col-lg-12">
                 <h3>Integration</h3>
 
+                <p>As of now dotHIV will not be able to run DNS servers for .hiv domains, so we depend on .hiv domain
+                    owners to report their visits back to us.</p>
+
+                We have three options for that:
+
+                <h4>Include a call to our banner script (preferred)</h4>
+
+                <p>You modify your existing page and integrate a JavaScript tag which loads our banner from Google
+                    AppEngine. We use this to count visits.</p>
+
                 <p>Just add this line before the <code>&lt;/body&gt;</code> tag of your site:</p>
 
-                <small><code>&lt;script src="//dothiv-registry.appspot.com/static/banner.min.js" type="text/javascript"&gt;&lt;/script&gt;</code>
-                </small>
+                <p>
+                    <small><code>&lt;script src="//dothiv-registry.appspot.com/static/banner.min.js"
+                        type="text/javascript"&gt;&lt;/script&gt;</code>
+                    </small>
+                </p>
 
+                <p>This page uses this approach.</p>
+
+                <h4>Wrap your regular site in an iframe</h4>
+
+                <p>If you do not want to modify your existing site, let your .hiv domain point to a separate webspace
+                    account containing a simple <code>index.html</code> that loads your regular page in an iframe. We
+                    can then overlay your regular site with our banner.</p>
+
+                <p>We have a <a href="iframe.html">demo of this technique</a>, too.</p>
+
+                <h4>Build your own counter</h4>
+
+                <p>Our counter has a
+                    <a href="https://github.com/dothiv/clickcounter-backend#increment-counter-per-domain">simple REST
+                        api</a> which can be used to develop custom counters.</p>
+
+                <p>This can be used to report visitors to us.</p>
             </div>
         </div>
 
@@ -117,36 +132,28 @@
                 <h3>Styles</h3>
 
                 <p>They come in three different sizes. We have a large <strong>center</strong> version which is
-                    displayed
-                    whenever a user
-                    visits a .HIV domain for the first time. It's a real beauty, isn't it? As we don't want to get in
-                    the
-                    way on the next visits to that domain users will see either the <strong>top</strong> or
-                    <strong>right</strong> version which are much
-                    smaller and more compact. Where the center version is the high-five these are the small nods. Even
-                    if we
-                    could count visits without the click counters we'd like to show our appreciation every time …
-                </p>
+                    displayed whenever a user visits a .HIV domain for the first time. It's a real beauty, isn't it? As
+                    we don't want to get in the way on the next visits to that domain users will see either the <strong>top</strong>
+                    or <strong>right</strong> version which are much smaller and more compact. Where the center version
+                    is the high-five these are the small nods. Even if we could count visits without the click counters
+                    we'd like to show our appreciation every time … </p>
 
                 <p>
-                    Try them: <a href="?1#dothiv:center">center</a> , <a href="?2#dothiv:top">top</a>, <a href="?3#dothiv:right">right</a>.
-                </p>
+                    Try them: <a href="?1#dothiv:center">center</a> , <a href="?2#dothiv:top">top</a>,
+                    <a href="?3#dothiv:right">right</a>. </p>
 
             </div>
             <div class="col-lg-6">
                 <h3>Technology</h3>
 
-                <p>They are implemented in HTML and JavaScript, their source code is <a
-                        href="https://GitHub.com/dotHIV/banner">available on GitHub</a>. </p>
+                <p>They are implemented in HTML and JavaScript, their source code is
+                    <a href="https://GitHub.com/dotHIV/banner">available on GitHub</a>. </p>
 
-                <p>The <a
-                        href="https://github.com/dotHIV/clickcounter-backend">backend</a> for counting and delivering is
-                    implemented in
-                    Python and runs on Google AppEngine.</p>
+                <p>The <a href="https://github.com/dotHIV/clickcounter-backend">backend</a> for counting and delivering
+                    is implemented in Python and runs on Google AppEngine.</p>
 
-                <p> The configuration wizard on our <a
-                        href="https://github.com/dotHIV/dotHIV">platform</a> is build on AngularJS and
-                    Symfony2.</p>
+                <p> The configuration wizard on our <a href="https://github.com/dotHIV/dotHIV">platform</a> is build on
+                    AngularJS and Symfony2.</p>
             </div>
 
         </div>
@@ -155,8 +162,7 @@
 
     <footer>
         <a href="http://dotHIV.org" title=".hiv domains – The Red Ribbon of the digital age | HIV &amp; AIDS">
-            <img src="https://raw.githubusercontent.com/dothiv/dothiv-gfx/master/png/banner/ribbon.png"
-                 alt="red ribbon">
+            <img src="https://raw.githubusercontent.com/dothiv/dothiv-gfx/master/png/banner/ribbon.png" alt="red ribbon">
         </a>
     </footer>
 
