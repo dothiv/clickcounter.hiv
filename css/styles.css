@@ -5,8 +5,11 @@ a:focus {
 }
 /* Space out content a bit */
 body {
-  padding-top: 60px;
+  padding-top: 70px;
   padding-bottom: 20px;
+}
+.header {
+  margin-top: 70px;
 }
 .header,
 footer {
@@ -60,6 +63,10 @@ article {
 article .header {
   margin-left: 15px;
   margin-right: 15px;
+}
+article img {
+  max-width: 100%;
+  margin-bottom: 1em;
 }
 footer {
   text-align: center;
