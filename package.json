@@ -6,8 +6,8 @@
         "url": "https://github.com/dothiv/banner.git"
     },
     "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-contrib-less": "~0.6.4",
-        "grunt-cli": "~0.1.13"
+        "grunt": "~1.0.1",
+        "grunt-contrib-less": "~1.4.1",
+        "grunt-cli": "~1.2.0"
     }
 }
